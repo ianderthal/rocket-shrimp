@@ -7,7 +7,7 @@ module.exports = {
         .setDescription('fetches a random cat image'),
     async execute(interaction) {
         const catResult = await request('https://cataas.com/cat');
-        await interaction.reply('Getting you a cat right meow.');
+        await interaction.reply({ content:'Fetching a cat right meow!', fetchReply: true });
         console.log('response received', catResult.statusCode);
     },
 };
