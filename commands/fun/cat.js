@@ -14,6 +14,6 @@ module.exports = {
         if (!list.length) {
 		    return interaction.editReply(`No results found for your request.`);
 		}
-        interaction.editReply(`**Definition of a cat**: ${list[0].definition}`);
+        interaction.editReply(`**Definition of a cat**: ${list[(Math.floor(Math.random() *  list.length))].definition}`);
     },
 };
